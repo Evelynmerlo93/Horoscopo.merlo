@@ -1,0 +1,74 @@
+[
+  {
+    "signo": "Aries",
+    "fecha": "21/03 - 19/04",
+    "mensaje": "Hoy es un gran día para nuevos comienzos.",
+    "elemento": "Fuego"
+  },
+  {
+    "signo": "Tauro",
+    "fecha": "20/04 - 20/05",
+    "mensaje": "La paciencia te abrirá puertas inesperadas.",
+    "elemento": "Tierra"
+  },
+  {
+    "signo": "Géminis",
+    "fecha": "21/05 - 20/06",
+    "mensaje": "Tu creatividad estará al máximo. Aprovechala.",
+    "elemento": "Aire"
+  },
+  {
+    "signo": "Cáncer",
+    "fecha": "21/06 - 22/07",
+    "mensaje": "Escuchá tu intuición, te guiará por buen camino.",
+    "elemento": "Agua"
+  },
+  {
+    "signo": "Leo",
+    "fecha": "23/07 - 22/08",
+    "mensaje": "Hoy brillarás con luz propia, no te ocultes.",
+    "elemento": "Fuego"
+  },
+  {
+    "signo": "Virgo",
+    "fecha": "23/08 - 22/09",
+    "mensaje": "Los detalles importan: prestá atención a lo pequeño.",
+    "elemento": "Tierra"
+  },
+  {
+    "signo": "Libra",
+    "fecha": "23/09 - 22/10",
+    "mensaje": "El equilibrio te traerá claridad en tus decisiones.",
+    "elemento": "Aire"
+  },
+  {
+    "signo": "Escorpio",
+    "fecha": "23/10 - 21/11",
+    "mensaje": "Tu intensidad puede transformar cualquier situación.",
+    "elemento": "Agua"
+  },
+  {
+    "signo": "Sagitario",
+    "fecha": "22/11 - 21/12",
+    "mensaje": "Tu espíritu aventurero te llevará a nuevas oportunidades.",
+    "elemento": "Fuego"
+  },
+  {
+    "signo": "Capricornio",
+    "fecha": "22/12 - 19/01",
+    "mensaje": "Tu esfuerzo dará frutos, aunque tarden en llegar.",
+    "elemento": "Tierra"
+  },
+  {
+    "signo": "Acuario",
+    "fecha": "20/01 - 18/02",
+    "mensaje": "Tus ideas innovadoras impactarán a los demás.",
+    "elemento": "Aire"
+  },
+  {
+    "signo": "Piscis",
+    "fecha": "19/02 - 20/03",
+    "mensaje": "Conectá con tu mundo emocional, te dará respuestas.",
+    "elemento": "Agua"
+  }
+]

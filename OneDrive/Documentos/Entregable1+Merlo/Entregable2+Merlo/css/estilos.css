@@ -1,0 +1,178 @@
+/* Reset y ajustes iniciales */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right top, #e0c3fc, #8ec5fc);
+  color: #333;
+  padding: 40px 20px;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Títulos */
+h1 {
+  color: #5e2a84;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 2.4rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+h2 {
+  color: #6c38cc;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+/* Párrafo inicial destacado */
+.descripcion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #000;
+  margin: 40px auto;
+  max-width: 700px;
+  line-height: 1.5;
+  background: #fff;
+  padding: 25px 20px;
+  border-radius: 12px;
+  border: 2px solid #dabfff;
+  box-shadow: 0 6px 14px rgba(108, 56, 204, 0.08);
+}
+
+/* Formulario */
+form {
+  background-color: #ffffff;
+  border: 2px solid #dabfff;
+  border-radius: 12px;
+  padding: 25px;
+  max-width: 450px;
+  margin: 20px auto;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+form:hover {
+  box-shadow: 0 10px 20px rgba(108, 56, 204, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 12px;
+  font-weight: bold;
+  color: #5e2a84;
+  font-size: 1.1rem;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  background-color: #fafafa;
+}
+
+/* Botones */
+button {
+  background: linear-gradient(135deg, #8a4fff, #6c38cc);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(108, 56, 204, 0.2);
+}
+
+#otroSigno {
+  display: inline-block;
+  margin: 20px auto;
+  text-align: center;
+}
+
+#borrarHistorial {
+  display: block;
+  margin: 10px auto 30px;
+}
+
+/* Resultado */
+#resultado {
+  background-color: #ffffff;
+  border-left: 5px solid #8a4fff;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 30px auto;
+  font-size: 1.2em;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  color: #333;
+}
+
+/* Historial */
+#historial {
+  max-width: 700px;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#historial div {
+  background-color: #fff;
+  border-left: 5px solid #dabfff;
+  padding: 15px 20px;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  form, #resultado, #historial {
+    padding: 15px;
+    margin: 15px auto;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+/* Clase para el texto introductorio centrado y estirado */
+.intro {
+  text-align: center;        
+  max-width: 700px;          
+  margin: 20px auto 40px;     
+  font-size: 1.4rem;        
+  font-weight: 600;          
+  color: #222;                
+  letter-spacing: 0.05em;     
+  line-height: 1.5;           
+}

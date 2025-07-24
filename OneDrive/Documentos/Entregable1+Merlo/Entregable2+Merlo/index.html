@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Simulador de Horóscopo Personalizado</title>
+  <link rel="stylesheet" href="css/estilos.css" />
+</head>
+<body>
+  <main>
+    <h1>Simulador de Horóscopo</h1>
+
+<p class="intro">Este simulador te pide tu signo del zodiaco y te da una predicción diaria.</p>
+
+
+    <form id="formSigno">
+      <label for="signo">Elegí tu signo del zodiaco:</label>
+      <select id="signo" required>
+        <option value="">-- Seleccioná --</option>
+      </select>
+      <button type="submit">Ver mi predicción</button>
+    </form>
+
+    <div id="resultado"></div>
+
+    <button id="otroSigno" style="display:none;">Consultar otro signo</button>
+    <button id="borrarHistorial">Borrar historial</button>
+
+    <h2>Historial de consultas</h2>
+    <div id="historial"></div>
+  </main>
+
+  <!-- Importar SweetAlert2 desde CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- Tu script principal -->
+  <script src="main.js"></script>
+</body>
+</html>
