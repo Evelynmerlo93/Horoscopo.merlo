@@ -1,0 +1,297 @@
+{
+	"name": "cssrem",
+	"displayName": "px to rem & rpx & vw (cssrem)",
+	"description": "Converts between px and rem & rpx & vw units in VSCode",
+	"version": "4.1.1",
+	"publisher": "cipchk",
+	"icon": "icon.png",
+	"license": "MIT",
+	"licenseUrl": "LICENSE",
+	"scripts": {
+		"vscode:prepublish": "npm run check-types && tsx ./scripts/esbuild.js --production",
+		"compile": "yarn run check-types && yarn run lint && tsx ./scripts/esbuild.js",
+		"watch": "tsx ./scripts/esbuild.js --watch",
+		"package": "yarn run lint && yarn run check-types && tsx ./scripts/esbuild.js --production",
+		"compile-tests": "tsc -p . --outDir out",
+		"watch-tests": "tsc -p . -w --outDir out",
+		"pretest": "yarn run compile-tests && yarn run compile && yarn run lint",
+		"check-types": "tsc --noEmit",
+		"lint": "eslint src",
+		"test": "vscode-test",
+		"publish": "vsce package --no-yarn",
+		"changelog": "conventional-changelog -p angular -i CHANGELOG.md -s --pkg package.json"
+	},
+	"l10n": "./l10n",
+	"main": "./out/extension",
+	"browser": "./out/extension.web",
+	"engines": {
+		"vscode": "^1.90.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/cipchk/vscode-cssrem.git"
+	},
+	"bugs": {
+		"url": "https://github.com/cipchk/vscode-cssrem/issues",
+		"email": "cipchk@qq.com"
+	},
+	"homepage": "https://github.com/cipchk/vscode-cssrem",
+	"keywords": [
+		"rem",
+		"px rem",
+		"px to rem",
+		"px2rem",
+		"rem to px",
+		"css rem",
+		"wxss",
+		"px to rpx",
+		"rpx to px",
+		"vw",
+		"px to vw",
+		"vw to px"
+	],
+	"categories": [
+		"Formatters",
+		"Snippets",
+		"Other"
+	],
+	"activationEvents": [
+		"onLanguage:html",
+		"onLanguage:vue",
+		"onLanguage:css",
+		"onLanguage:postcss",
+		"onLanguage:less",
+		"onLanguage:scss",
+		"onLanguage:sass",
+		"onLanguage:stylus",
+		"onLanguage:tpl",
+		"onLanguage:wxss",
+		"onLanguage:twig",
+		"onLanguage:javascriptreact",
+		"onLanguage:typescriptreact",
+		"onLanguage:javascript",
+		"onLanguage:typescript"
+	],
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.cssrem",
+				"title": "CSSRem: Px To Rem"
+			},
+			{
+				"command": "extension.cssrem.rem-to-px",
+				"title": "CSSRem: Rem To Px"
+			},
+			{
+				"command": "extension.cssrem.rem-switch-px",
+				"title": "CSSRem: Rem <=> Px"
+			},
+			{
+				"command": "extension.cssrem.px-to-vw",
+				"title": "CSSRem: Px To VW"
+			},
+			{
+				"command": "extension.cssrem.vw-to-px",
+				"title": "CSSRem: VW To Px"
+			},
+			{
+				"command": "extension.cssrem.vw-switch-px",
+				"title": "CSSRem: VW <=> Px"
+			},
+			{
+				"command": "extension.cssrem.px-to-rpx",
+				"title": "CSSRem: Px To Rpx (小程序WXSS)"
+			},
+			{
+				"command": "extension.cssrem.rpx-to-px",
+				"title": "CSSRem: Rpx To Px (小程序WXSS)"
+			},
+			{
+				"command": "extension.cssrem.rpx-switch-px",
+				"title": "CSSRem: Rpx <=> Px (小程序WXSS)"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "extension.cssrem.rem-switch-px",
+				"key": "Alt+z"
+			},
+			{
+				"command": "extension.cssrem.vw-switch-px",
+				"key": "Alt+v Alt+w"
+			},
+			{
+				"command": "extension.cssrem.rpx-switch-px",
+				"key": "Alt+r"
+			}
+		],
+		"configuration": {
+			"type": "object",
+			"title": "cssrem configuration",
+			"properties": {
+				"cssrem.rootFontSize": {
+					"type": "number",
+					"default": 16,
+					"description": "%cssrem.rootFontSize%"
+				},
+				"cssrem.fixedDigits": {
+					"type": "number",
+					"default": 4,
+					"description": "%cssrem.fixedDigits%"
+				},
+				"cssrem.autoRemovePrefixZero": {
+					"type": "boolean",
+					"default": true,
+					"description": "%cssrem.autoRemovePrefixZero%"
+				},
+				"cssrem.ignoresViaCommand": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					},
+					"default": [],
+					"description": "%cssrem.ignoresViaCommand%"
+				},
+				"cssrem.addMark": {
+					"type": "boolean",
+					"default": false,
+					"description": "%cssrem.addMark%"
+				},
+				"cssrem.hover": {
+					"type": "string",
+					"enum": [
+						"disabled",
+						"always",
+						"onlyMark"
+					],
+					"default": "onlyMark",
+					"markdownEnumDescriptions": [
+						"%cssrem.hover.disabled%",
+						"%cssrem.hover.always%",
+						"%cssrem.hover.onlyMark%"
+					],
+					"description": "%cssrem.hover%"
+				},
+				"cssrem.ignores": {
+					"type": "array",
+					"default": [],
+					"items": {
+						"type": "string"
+					},
+					"description": "%cssrem.ignores%"
+				},
+				"cssrem.languages": {
+					"type": "array",
+					"default": [],
+					"items": {
+						"type": "string"
+					},
+					"description": "%cssrem.languages%"
+				},
+				"cssrem.currentLine": {
+					"type": "string",
+					"enum": [
+						"disabled",
+						"show"
+					],
+					"default": "show",
+					"markdownEnumDescriptions": [
+						"%cssrem.currentLine.disabled%",
+						"%cssrem.currentLine.show%"
+					],
+					"description": "%cssrem.currentLine%"
+				},
+				"cssrem.remHover": {
+					"type": "boolean",
+					"default": true,
+					"description": "%cssrem.remHover%"
+				},
+				"cssrem.vw": {
+					"type": "boolean",
+					"default": false,
+					"description": "%cssrem.vw%"
+				},
+				"cssrem.vwHover": {
+					"type": "boolean",
+					"default": true,
+					"description": "%cssrem.vwHover%"
+				},
+				"cssrem.vwDesign": {
+					"type": "number",
+					"default": 750,
+					"description": "%cssrem.vwDesign%"
+				},
+				"cssrem.wxss": {
+					"type": "boolean",
+					"default": false,
+					"description": "%cssrem.wxss%"
+				},
+				"cssrem.wxssScreenWidth": {
+					"type": "number",
+					"default": 750,
+					"description": "%cssrem.wxssScreenWidth%"
+				},
+				"cssrem.wxssDeviceWidth": {
+					"type": "number",
+					"default": 375,
+					"description": "%cssrem.wxssDeviceWidth%"
+				}
+			}
+		},
+		"colors": [
+			{
+				"id": "extension.cssrem.trailingLineBackgroundColor",
+				"description": "Specifies the background color of the blame annotation for the current line",
+				"defaults": {
+					"dark": "#00000000",
+					"light": "#00000000",
+					"highContrast": "#00000000"
+				}
+			},
+			{
+				"id": "extension.cssrem.trailingLineForegroundColor",
+				"description": "Specifies the foreground color of the blame annotation for the current line",
+				"defaults": {
+					"dark": "#99999970",
+					"light": "#99999970",
+					"highContrast": "#99999999"
+				}
+			}
+		]
+	},
+	"devDependencies": {
+		"@types/mocha": "^10.0.9",
+		"@types/node": "20.x",
+		"@types/vscode": "^1.90.0",
+		"@typescript-eslint/eslint-plugin": "^8.10.0",
+		"@typescript-eslint/parser": "^8.7.0",
+		"@vscode/l10n-dev": "^0.0.18",
+		"@vscode/test-cli": "^0.0.10",
+		"@vscode/test-electron": "^2.4.1",
+		"conventional-changelog-cli": "^5.0.0",
+		"esbuild": "^0.24.0",
+		"eslint": "^9.13.0",
+		"tsx": "^4.19.2",
+		"typescript": "^5.6.3"
+	},
+	"dependencies": {
+		"@vscode/l10n": "^0.0.10",
+		"jsonc-parser": "^3.0.0",
+		"minimatch": "^10.0.1"
+	},
+	"packageManager": "yarn@4.5.0",
+	"__metadata": {
+		"id": "a0e969a7-a8a4-4958-8b82-ad690ebfa5c0",
+		"publisherId": "01530181-ea7a-4925-8d27-e7f2d527df3a",
+		"publisherDisplayName": "cipchk",
+		"targetPlatform": "undefined",
+		"isApplicationScoped": false,
+		"isPreReleaseVersion": false,
+		"hasPreReleaseVersion": false,
+		"installedTimestamp": 1737037809653,
+		"pinned": false,
+		"preRelease": false,
+		"source": "gallery",
+		"size": 6142916
+	}
+}
