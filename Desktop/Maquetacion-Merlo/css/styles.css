@@ -10,8 +10,81 @@ header{
 
 .navbar{
     padding:1rem;
+    display:flex; /* Porque queremos una linea horizontal*/
+    justify-content: space-between; /*Porque queremos separacion izquierda/derecha */
+    align-items: center;
+}
+
+.navbar-left, .navbar-right{
+    display: flex;
+    gap: 16px;
+    align-items: center;
 }
 
 body{
     font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 1rem; /*Separa hero de contenedores de arriba y abajo*/
+}
+
+.hero h1{
+    font-size: clamp(2rem, 5vw, 4rem);
+}
+
+.hero input{
+    padding: 1rem;
+    width: 100%;
+    max-width: 500px;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.card{
+    padding: 1.5rem; /*espacio interior en las cards*/
+    border-radius: 0.5rem; /*redondea esquinas*/
+    border: 1px solid #ddd;
+}
+
+@media (min-width: 768px){ /*media nos indica que cuando se cumpla la condicion de que la pantalla tenga igual o mas de 768 debe cumplirse esta regla.*/
+
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /*2 columnas cada una ocupa el mismo espacio*/
+    }
+
+    .card p{
+    line-height: 1.5;
+}
+
+}
+
+
+.footer{
+    display: grid; /*por defecto una sola columna*/
+    grid-template-columns: 1fr;
+}
+
+@media (min-width:768px){ /*cuando la pantalla sea mas grande,se cumple. */ 
+
+    .footer{
+        grid-template-columns:repeat(4,1fr);
+    }
+
+}
+
+.footer ul{
+    list-style: none;
+}
+
+.footer h3{
+    margin-bottom: 1rem;
 }

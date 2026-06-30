@@ -1,48 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maquetación</title>
 
-    <link rel="stylesheet" href="./css/styles.css"
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
+
 <body>
-    
+
     <header>
         <nav class="navbar">
-            
-            <div class="navbar-left">
-            <span class="logo">Abstract</span>
-            <span class="divider">|</span>
-            <span class="help-center">Help Center</span>
-            </div>
 
-            <div class="navbar-right">
-                <button class="request-btn">
-                    Submit a request
-                </button>
+            <ul class="navbar-left">
+                <!-- no existe otra etiqueta semantica mejor en este caso?? si,, puedo usar ul y li  -->
 
-            <button class="signin-btn">
-                Sign in
-            </button>
-            </div>
+                <li> Abstract </li>
 
-            
+                <li> | </li>
+
+                    <li> Help Center </li>
+
+            </ul>
+
+            <ul class="navbar-right">
+
+                <li>
+                    <button class="request-btn">Submit a request</button>
+                </li>
+
+                <li>
+                    <button class="signin-btn">Sign in</button>
+                </li>
+
+            </ul>
+
+
         </nav>
-</header>
+    </header>
 
-<main aria-label="Abrasct Help Center">
+    <main aria-label="Abrasct Help Center">
 
-    <section class="hero">
-    </section>
+        <!-- HERO -->
+        <section class="hero"> <!-- zona principal -->
 
-     <section class="hero">
-    </section>
+            <h1>¿How can we help?</h1> <!-- titulo -->
 
-</main>
+            <input type="text" placeholder="Search"> <!--Busqueda-->
 
-<footer>
-</footer>
+        </section>
+
+        <!-- CARDS -->
+        <section class="cards">
+
+            <article class="card">
+                <h2> Manage your account </h2>
+                <p>
+                    Configure yout account settings, profile and preferences.
+                </p>
+
+            </article>
+
+            <article class="card">
+                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+
+            </article>
+
+            <article class="card">
+                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+
+            </article>
+
+            <article class="card">
+                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+
+            </article>
+
+            <article class="card">
+                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia repellat beatae asperiores ullam
+                    quisquam repudiandae dolor .</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, eum ratione inventore magnam
+                    aspernatur odit similique tenetur.</p>
+
+            </article>
+
+            <article class="card">
+                <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam error in autem libero culpa eligendi
+                    suscipit laborum asperiores.</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque tempora sunt voluptas, praesentium
+                    deserunt ratione maiores, minim.</p>
+
+            </article>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <section class="footer-column">
+            <h3>Abstract</h3>
+
+            <ul>
+                <li>Satr Trial</li>
+                <li>Pricing</li>
+                <li>Dowload</li>
+            </ul>
+        </section>
+
+        <section class="footer-column">
+            <h3>Resource</h3>
+
+            <ul>
+                <li>Blog</li>
+                <li>Help Center</li>
+                <li>Release Notes</li>
+            </ul>
+
+        </section>
+
+        <section class="footer-column">
+            <h3>Comunity</h3>
+
+            <ul>
+                <li>Twitter</li>
+                <li>Linkedin</li>
+                <li>Discord</li>
+            </ul>
+        </section>
+
+         <section class="footer-column">
+            <h3>Comunity</h3>
+
+            <ul>
+                <li>About Us</li>
+                <li>Careers</li>
+                <li>Contact</li>
+            </ul>
+        </section>
+
+    </footer>
 </body>
+
 </html>
